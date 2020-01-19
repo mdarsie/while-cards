@@ -8,24 +8,24 @@ const express = require('express')
  * Import the api files from the models
  *
  * TODO: change the file path to the models file you'll need to use.
- * TODO: rename this from `templateApi` to something more sensible (e.g:
+ * TODO: rename this from `flashcardApi` to something more sensible (e.g:
  * `shopsAPI`)
  *
  * NOTE: You may need to import more than one API to create the 
  * controller you need.
  * 
  */
-const templateApi = require('../models/template.js')
+const flashcardApi = require('../models/flashcard.js')
 
 /* Step 3 
  * 
  * Create a new router.
  *
  * the router will "contain" all the request handlers that you define in this file.
- * TODO: rename this from templateRouter to something that makes sense. (e.g:
+ * TODO: rename this from flashcardRouter to something that makes sense. (e.g:
  * `shopRouter`)
  */
-const templateRouter = express.Router()
+const flashcardRouter = express.Router()
 
 /* Step 4
  * 
@@ -36,8 +36,8 @@ const templateRouter = express.Router()
  *
  * TODO: delete this handler; it's just a sample
  */ 
-templateRouter.get('/', (req, res) => {
-  res.json(templateApi.getHelloWorldString())
+flashcardRouter.get('/', (req, res) => {
+  res.json(flashcardApi.getHelloWorldString())
 })
 
 /* Step 6
@@ -46,5 +46,5 @@ templateRouter.get('/', (req, res) => {
  *
  */
 module.exports = {
-  templateRouter
+  flashcardRouter
 }
